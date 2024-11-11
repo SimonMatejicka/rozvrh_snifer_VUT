@@ -28,12 +28,12 @@ source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
 pip install flask selenium
 ```
 
-##Configuration
+## Configuration
 
 You need to specify the login credentials for the university portal:
 
-- **username**: Your university login.
-- **password**: Your university password.
+`username`: Your university login.
+`password`: Your university password.
 Modify these in the display_schedule function:
 
 ```python
@@ -47,9 +47,9 @@ schedule_url: The URL for the student's schedule.
 login_url: The URL for the login page.
 ```
 
-Running the Application
-To run the application, execute the following command:
+## Running the Application
 
+To run the application, execute the following command:
 ```bash
 python app.py
 ```
