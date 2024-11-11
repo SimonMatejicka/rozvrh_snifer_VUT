@@ -35,18 +35,14 @@ def fetch_class_schedule(schedule_url, login_url, username, password):
     driver.find_element(By.NAME, "login").send_keys(username)
     driver.find_element(By.NAME, "btnsubmit").click()
 
-    # Wait for the password field to load
-    # time.sleep(2)
-
     # Step 2: Enter password and submit again
     driver.find_element(By.NAME, "passwd").send_keys(password)
     driver.find_element(By.NAME, "btnSubmit").click()
 
-    # Wait for the login process to complete
-
     # Navigate to the schedule page
     driver.get(schedule_url)
 
+    time.sleep(2)
     # Parse page content
     schedule_data = driver.find_elements(By.CLASS_NAME, "rozvrh")[0]
     schedule_data_out = schedule_data.get_attribute('outerHTML')
